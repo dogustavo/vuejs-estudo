@@ -1,0 +1,19 @@
+@use 'sass:map';
+$themes: (
+  light: (
+    text: #363131,
+    background: #f6f8fc,
+    primary: #dd092f,
+    secondary: #ff5350,
+  ),
+  dark: (
+    text: #e5f5ff,
+    background: #07090a,
+    primary: #68cbfd,
+    secondary: #021cad,
+  ),
+);
+
+@function theme-color($theme-name, $color-name) {
+  @return map.get(map.get($themes, $theme-name), $color-name);
+}
