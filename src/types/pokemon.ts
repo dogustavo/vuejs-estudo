@@ -69,3 +69,10 @@ export interface Pokemon {
   types: Type[]
   weight: number
 }
+
+export interface PokemonResponse {
+  data: Pokemon[]
+  count: number
+  next: null | string
+  previous: null | string
+}

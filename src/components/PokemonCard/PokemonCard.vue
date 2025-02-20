@@ -65,7 +65,7 @@ const TYPE_COLORS: Record<PokemonType, string> = {
     </div>
 
     <div :class="styled.pokemon">
-      <p># {{ String(pokemon.order).padStart(3, '0') }}</p>
+      <p># {{ String(pokemon.id).padStart(3, '0') }}</p>
       <img :src="pokemon.sprites.front_default" />
     </div>
   </div>

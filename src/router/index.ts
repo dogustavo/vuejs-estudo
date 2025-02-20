@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 
 import HomeView from '@/view/Home/ListPokemon.vue'
 import DetailPage from '@/view/Pokemon/DetailPage.vue'
+import AppPokemonQuery from '@/view/PokemonQuery/AppPokemonQuery.vue'
 
 const routes = [
   {
@@ -13,6 +14,12 @@ const routes = [
     path: '/:name',
     name: 'Pokemon',
     component: DetailPage, // Página do Pokémon específico
+    props: true,
+  },
+  {
+    path: '/pokemons',
+    name: 'Pokemons',
+    component: AppPokemonQuery, // Página do Pokémons com tanstack query
     props: true,
   },
 ]

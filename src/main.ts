@@ -2,6 +2,13 @@ import './styles/global.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import { VueQueryPlugin } from '@tanstack/vue-query'
+
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.use(VueQueryPlugin)
+
+app.mount('#app')

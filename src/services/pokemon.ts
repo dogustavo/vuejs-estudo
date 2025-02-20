@@ -8,7 +8,7 @@ interface IPokemons {
 interface IRepsonse {
   count: number
   previous: null | string
-  next: string
+  next: null | string
   results: { name: string; url: string }[]
 }
 

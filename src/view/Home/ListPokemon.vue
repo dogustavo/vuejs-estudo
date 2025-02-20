@@ -44,7 +44,7 @@ const loadPokemon = async () => {
     pokemonsData.value = pokemons.data
     pageInfo.value = {
       count: pokemons.count ?? 1,
-      offset: +(searchTerm.value.offset ?? 1),
+      offset: +(searchTerm.value.offset ?? 0),
       limit: +(searchTerm.value.limit ?? 21),
       next: pokemons.next || null,
       previous: pokemons.previous || null,
