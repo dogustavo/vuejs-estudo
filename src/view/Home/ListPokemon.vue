@@ -8,10 +8,10 @@ import PokemonCard from '@/components/PokemonCard/PokemonCard.vue'
 import { getPokemons } from '@/services'
 import type { Pokemon } from '@/types/pokemon'
 
-import styles from './styles.module.scss'
 import PaginationComponent from '@/components/Paginate/PaginationComponent.vue'
 
 const route = useRoute()
+const searchTerm = ref(route.query)
 
 const isLoading = ref(true)
 const error = ref('')
@@ -29,8 +29,6 @@ const pageInfo = ref<{
   next: null,
   previous: null,
 })
-
-const searchTerm = ref(route.query)
 
 const loadPokemon = async () => {
   try {
@@ -73,16 +71,10 @@ watch(
 </script>
 
 <template>
-  <section :class="styles['pokemons-section']">
+  <section class="pokemons-section">
     <Container>
-      <div :class="styles.list">
-        <router-link
-          v-for="pokemon in pokemonsData"
-          v-bind:key="pokemon.id"
-          :to="`/${pokemon.name}`"
-        >
-          <PokemonCard :pokemon="pokemon" />
-        </router-link>
+      <div class="pokemons-section__list">
+        <PokemonCard v-for="pokemon in pokemonsData" v-bind:key="pokemon.id" :pokemon="pokemon" />
       </div>
 
       <PaginationComponent
@@ -96,4 +88,6 @@ watch(
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@import './styles.module.scss';
+</style>

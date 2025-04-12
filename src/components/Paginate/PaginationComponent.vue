@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineProps, reactive, ref, watch } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 interface IProps {

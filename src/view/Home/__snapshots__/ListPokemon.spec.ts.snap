@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Renderiza o componente de forma correta 1`] = `
+"<section data-v-5e3cb3a3="" class="pokemons-section">
+  <container-stub data-v-5e3cb3a3=""></container-stub>
+</section>"
+`;

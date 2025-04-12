@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -15,11 +17,14 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // api: 'legacy',
         additionalData: `
           @use "@/styles/app.scss" as *;
         `,
       },
     },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
   },
 })

@@ -1,6 +1,6 @@
 .pokemons-section {
   padding: rem(100) 0;
-  .list {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;

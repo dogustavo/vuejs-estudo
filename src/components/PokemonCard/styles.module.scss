@@ -11,24 +11,7 @@
     transform: translate(10px, -10px);
   }
 
-  .status {
-    h3 {
-      font-size: $title-medium;
-      margin-bottom: 5px;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-
-    p {
-      font-size: 13px;
-      font-weight: normal;
-      color: #363131;
-    }
-  }
-
-  .pokemon {
+  &__pokemon {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -43,19 +26,40 @@
       width: rem(128);
     }
   }
+}
 
-  .pokemon-type-badge {
+.pokemon-status {
+  h3 {
+    font-size: $title-medium;
+    margin-bottom: 5px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: normal;
+    color: #363131;
+  }
+
+  &__type-badge {
     display: flex;
     align-items: center;
     gap: 9px;
     margin-bottom: 5px;
+  }
 
-    span {
-      padding: 5px 10px;
-      border-radius: 50px;
-      color: $color-background;
-      font-weight: bold;
-      font-size: 12px;
+  &__badge-text {
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: $color-background;
+    font-weight: bold;
+    font-size: 12px;
+
+    &--fire {
+      text-decoration: underline;
     }
   }
 }
